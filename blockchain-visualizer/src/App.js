@@ -354,7 +354,6 @@ function App() {
       <div className="controls-section">
         <div className="difficulty-selector">
           <h3>Difficulty Level</h3>
-          <p className="difficulty-description">Difficulty determines how many leading zeros the hash must start with</p>
           <div className="difficulty-buttons">
             {[1, 2, 3, 4].map((level) => (
               <button
@@ -377,7 +376,7 @@ function App() {
           <div className="mining-input-group">
             <input
               type="text"
-              placeholder="Enter block data (e.g., Alice pays Bob 10 BTC)"
+              placeholder="Alice pays Bob 10"
               value={dataInput}
               onChange={(e) => setDataInput(e.target.value)}
               disabled={isMining}
