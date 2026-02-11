@@ -14,4 +14,4 @@ Screenshots of the project:
 ![Sample of the block being mined](mining.png)
 ![Sample of an invalid chain](invalid.png)
 ![Sample of the blocks being edited](editing.png)
-![Sample of a valid chain] (valid.png)
+![Sample of a valid chain](valid.png)
