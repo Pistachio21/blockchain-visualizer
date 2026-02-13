@@ -20,7 +20,6 @@ h1 {
   font-size: 0.9em;
 }
 
-/* Controls */
 .controls-section {
   display: flex;
   gap: 20px;
@@ -73,6 +72,7 @@ h1 {
 .mining-input-group {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .data-input {
@@ -116,10 +116,12 @@ h1 {
 }
 
 .mining-progress {
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 12px;
+  padding: 10px 12px;
   background: #f9f9f9;
   border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  width: 100%;
 }
 
 .progress-info {
@@ -129,7 +131,7 @@ h1 {
   color: #666;
 }
 
-/* Validation */
+
 .validation-indicator {
   display: flex;
   align-items: center;
@@ -154,7 +156,6 @@ h1 {
   border: 2px solid #dc3545;
 }
 
-/* Blockchain */
 .blockchain-section {
   background: white;
   padding: 20px;
@@ -174,7 +175,6 @@ h1 {
   gap: 15px;
 }
 
-/* Block Card */
 .block-card {
   background: #fff;
   border: 2px solid #e0e0e0;
@@ -313,7 +313,56 @@ h1 {
   color: #856404;
 }
 
-/* Re-mine Button */
+/* Invalid field highlighting */
+.block-row.invalid-field {
+  background: #f8d7da !important;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 2px solid #dc3545 !important;
+  margin-bottom: 10px;
+}
+
+.block-row.invalid-field .block-label {
+  color: #721c24 !important;
+}
+
+.block-row.invalid-field .block-value {
+  color: #dc3545 !important;
+  font-weight: bold !important;
+}
+
+.invalid-badge {
+  display: inline-block;
+  background: #dc3545 !important;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.block-row.invalid-row {
+  background: #f8d7da !important;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dc3545;
+}
+
+.invalid-icon {
+  font-size: 1.2em;
+}
+
+.invalid-message {
+  color: #721c24;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
 .remine-button {
   width: 100%;
   padding: 10px 15px;
@@ -346,7 +395,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Edit Button */
 .edit-row {
   display: flex;
   gap: 8px;
@@ -409,7 +457,6 @@ h1 {
   background: #c82333;
 }
 
-/* Arrow */
 .block-arrow {
   display: flex;
   align-items: center;
@@ -424,7 +471,6 @@ h1 {
   border-radius: 2px;
 }
 
-/* Instructions */
 .instructions {
   background: white;
   padding: 15px 20px;
