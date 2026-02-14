@@ -81,14 +81,14 @@ export function BlockCard({
           <span className="block-label">Nonce</span>
           <span className="block-value">{block.nonce}</span>
         </div>
-        <div className={`block-row ${!isValid ? 'invalid-field' : ''}`}>
+        <div className="block-row">
           <span className="block-label">Hash</span>
           <span className="block-value hash" title={block.hash || 'Calculating...'}>
             {block.hash ? truncateHash(block.hash) : 'Calculating...'}
           </span>
         </div>
         {block.previousHash && (
-          <div className={`block-row ${!previousHashValid ? 'invalid-field' : ''}`}>
+          <div className="block-row">
             <span className="block-label">Previous Hash</span>
             <span className="block-value hash" title={block.previousHash}>
               {truncateHash(block.previousHash)}

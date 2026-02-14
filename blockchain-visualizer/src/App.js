@@ -43,7 +43,24 @@ function App() {
   const getBlockValidationStatus = (block, index) => {
     if (index === 0) return { isValid: true };
     
-    // Check if block data has been modified
+    let hasEditedBlock = false;
+    for (let i = 0; i <= index; i++) {
+      if (editedData[i] !== undefined && editedData[i] !== originalData[i]) {
+        hasEditedBlock = true;
+        break;
+      }
+    }
+
+    if (hasEditedBlock) {
+      return {
+        isValid: false,
+        isModified: editedData[index] !== undefined && 
+        editedData[index] !== originalData[index],
+        hashValid: false,
+        previousHashValid: false
+      };
+    }
+    
     const isModified = editedData[index] !== undefined && editedData[index] !== originalData[index];
     
     const prevBlock = blockchainRef.current.chain[index - 1];
